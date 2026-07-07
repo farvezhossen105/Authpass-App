@@ -60,7 +60,7 @@ jobs:
     - run: gem install bundler
       if: ${{ startsWith(matrix.flavor, 'playstore') }}
     - name: Setup Gradle
-      uses: gradle/actions/setup-gradle@v4
+      uses: gradle/actions/setup-gradle@v6
     - name: install ndk
 #      run: 'yes | sdkmanager "ndk;21.0.6113669"'
       run: echo "y" | sudo ${ANDROID_SDK_ROOT}/cmdline-tools/latest/bin/sdkmanager --install "ndk;21.0.6113669" --sdk_root=${ANDROID_SDK_ROOT}
